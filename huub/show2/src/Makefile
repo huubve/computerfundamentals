@@ -7,21 +7,11 @@ C_SOURCES := $(wildcard *.c)
 C_EXECS := $(C_SOURCES:.c=) 
 C_OBJS := $(C_SOURCES:.c=.o) 
 C_ASMS := $(C_SOURCES:.c=.s) 
-C_PP := $(C_SOURCES:.c=.pp) 
-C_PPC := $(C_SOURCES:.c=.pp.c) 
 
-C_CLEAN_TARGETS := $(C_OBJS) $(C_EXECS) $(C_ASMS) $(C_PP) $(C_PPC) a.out
+C_CLEAN_TARGETS := $(C_OBJS) $(C_EXECS) $(C_ASMS) a.out
 
 %.s : %.c
-	m(yo.eCC) -S -O0 $(CFLAGS) $(CPPFLAGS) $<
-
-%.pp : %.c
-	$(CC) -E -O0 $(CFLAGS) $(CPPFLAGS) $< > $@
-
-% : %.pp
-	mv $< $<.c
-	$(CC) -O0 $(CFLAGS) $(CPPFLAGS) -o $@ $<.c
-
+	$(CC) -S -O0 $(CFLAGS) $(CPPFLAGS) $<
 
 what:
 	@echo "But what do you want me to make?" >&2
