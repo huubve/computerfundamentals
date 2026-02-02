@@ -1,47 +1,212 @@
 #include <stdio.h>
 
-#define THE_SIZE 6
+/* the old way of arranging SPOT about the size of your array was with a define */
+#define MAX_CHILDREN 30
+
 
 int main(int argc, char *argv[argc+1]) {
-	int	i;
-	int	kwadraten[THE_SIZE];
-	int	primes[] = { 1, 2, 3, 5, 7, 11};
+	unsigned int	i;
+	int		child_ids[MAX_CHILDREN];
 
-	char	aap[] = {'c','h','i','m','p','a','n','s','e','e'};
+	int		nrs[] = { 5, 7, 11, 13, 17, 21};
+	/* the way to get the length of an array at compiletime is
+	 * to get the size of the array in bytes and divide by the size of the elements in bytes
+	 * so, if you change above initialization, nothing else needs to change
+	 */
+	int		i_squares[sizeof(nrs)/sizeof(nrs[0])];
+	char		c_squares[sizeof(nrs)/sizeof(nrs[0])];
+	unsigned char	uc_squares[sizeof(nrs)/sizeof(nrs[0])];
 
-	char	rund[] = "koe";
+	int		n_nrs = sizeof(nrs)/sizeof(nrs[0]);
+
+ 	/* in C, type char is nothing more and nothing less that an 8 bit int,
+	 * look further down somewhere to see how we print them
+	 */
+	char		name[] = { 67, 101, 103, 101, 107, 97 }; /* yes, small ints can be a char */
+	int		n_name = sizeof(name)/sizeof(name[0]);
+	char		ascii_digits[]= { 48, 49,'2', '3', 52, 53, 54, '7', '8', '9' }; /* yes, char and small ints are interchangable */
+	int		n_digits = sizeof(ascii_digits)/sizeof(ascii_digits[0]);
+
 
 	i = 0;
-	while ( i < THE_SIZE ) {
-		kwadraten[i] = primes[i] * primes[i];
-		i = i + 1;
-	}
-	i = 0;
-	while ( i < THE_SIZE ) {
-		printf("%03d ", kwadraten[i]);
-		i = i + 1;
-	}
-	printf("\n");
-
-	i = 0;
-	while ( i < sizeof(aap) ) {
-		printf("%c", aap[i]);
+	while ( i < n_nrs ) {
+		i_squares[i] = nrs[i] * nrs[i];
+		c_squares[i] = (char)nrs[i] * (char)nrs[i];
+		uc_squares[i] = (unsigned char)nrs[i] * (unsigned char)nrs[i];
 		i += 1;
 	}
-	printf("\n");
-	i = 0;
-	while ( i < sizeof(aap) ) {
-		printf("%c", aap[i]);
-		i += 1;
-	}
-	printf("\n");
-	i = 0;
-	while ( i < sizeof(rund) ) {
-		printf("%c", rund[i]);
-		i += 1;
-	}
-	printf("\n");
 
+
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("NUMBERS & SQUARES int---------\n");
+	printf("------------------------------\n");
+	printf("(int)  (int)\n");
+	printf("   x    x*x\n");
+	printf("------------------------------\n");
+	i = 0;
+	while ( i < n_nrs ) {
+		printf(" %3d    %3d\n", nrs[i], i_squares[i]);
+		i += 1;
+	}
+	printf("------------------------------\n");
+	printf("-------- this seems ok -------\n");
+	printf("------------------------------\n\n\n");
+
+
+
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("NUMBERS & SQUARES unsigned char\n");
+	printf("------------------------------\n");
+	printf("(int)   (uchar) (int)\n");
+	printf("  x      x*x    (x*x)%%256 \n");
+	printf("------------------------------\n");
+	i = 0;
+	while ( i < n_nrs ) {
+		printf("%3d      %3d      %3d\n", nrs[i], uc_squares[i], i_squares[i]%256);
+		i += 1;
+	}
+	printf("------------------------------\n");
+	printf("can you explain overflow?\n");
+	printf("------------------------------\n\n\n");
+
+
+
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("NUMBERS & SQUARES char -------\n");
+	printf("------------------------------\n");
+	printf("(int)   (char)  (int)\n");
+	printf("  x      x*x     f(x) \n");
+	printf("------------------------------\n");
+	i = 0;
+	while ( i < n_nrs ) {
+		printf("%3d      %3d      %3d\n", nrs[i], c_squares[i], i_squares[i]%256<128 ? i_squares[i]%128: i_squares[i]%128-128);
+		i += 1;
+	}
+	printf("------------------------------\n");
+	printf("can you explain overflow?\n");
+	printf("------------------------------\n\n\n");
+
+
+
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("printing char with %%d versus %%c\n");
+	printf("------------------------------\n");
+	printf(" %%d      %%c\n");
+	printf("------------------------------\n");
+	i = 0;
+	while ( i < n_name ) {
+		printf("%3d      %c\n", name[i], name[i]);
+		i += 1;
+	}
+	printf("------------------------------\n");
+	printf("can you explain ASCII?\n");
+	printf("------------------------------\n\n\n");
+
+
+
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("(unsigned)char are just small int's\n");
+	printf("------------------------------\n");
+	char a = 7, b = 9;
+	printf("(char)%hhd + (char)%hhd = %hhd\n", a, b, (char)(a+b));
+	a = 'F', b = 's';
+	printf("%hhd(%c) + %hhd(%c) = %hhd\n", a, a, b, b, (char)(a+b));
+	printf("------------------------------\n");
+	printf("can you explain ASCII?\n");
+	printf("------------------------------\n\n\n");
+
+
+	
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("what you see is not what it is\n");
+	printf("------------------------------\n");
+	printf(" %%d      %%c\n");
+	printf("------------------------------\n");
+	i = 0;
+	while ( i < n_digits ) {
+		printf("%3d      %c\n", ascii_digits[i], ascii_digits[i]);
+		i += 1;
+	}
+	printf("------------------------------\n");
+	printf("can you explain ASCII?\n");
+	printf("------------------------------\n\n\n");
+
+
+
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("with unsigned int, x<< is x*2\n");
+	printf("------------------------------\n");
+	printf(" i      1 << i\n");
+	printf("------------------------------\n");
+	i = 0;
+	while ( i < 12 ) {
+		printf("%3d   %6d\n", i, 1 << i);
+		i += 1;
+	}
+	printf("------------------------------\n");
+	printf("-------- this seems ok -------\n");
+	printf("------------------------------\n\n\n");
+
+
+
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("with unsigned int, x<< is x*2\n");
+	printf("------------------------------\n");
+	printf(" i      5 << i\n");
+	printf("------------------------------\n");
+	i = 0;
+	while ( i < 12 ) {
+		printf("%3d   %6d\n", i, 5 << i);
+		i += 1;
+	}
+	printf("------------------------------\n");
+	printf("-------- this seems ok -------\n");
+	printf("------------------------------\n\n\n");
+
+
+
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("with unsigned int, x<< is x*2\n");
+	printf("------------------------------\n");
+	printf(" i       << i\n");
+	printf("------------------------------\n");
+	i = 0;
+	while ( i < 12 ) {
+		printf("%3d   %6d\n", i, 30000000 << i);
+		i += 1;
+	}
+	printf("------------------------------\n");
+	printf("----until it isn't -----------\n");
+	printf("------------------------------\n\n\n");
+
+
+
+	printf("line: %3d\n", __LINE__);
+	printf("------------------------------\n");
+	printf("XOR is a magical operation\n");
+	printf("------------------------------\n");
+	long la = 13579113;
+	long lb = 310197;
+	printf("la=%10ld  lb=%10ld\n", la, lb);
+	printf("la ^= lb\n");
+	la ^= lb;
+	printf("la=%10ld  lb=%10ld\n", la, lb);
+	printf("lb ^= la\n");
+	lb ^= la;
+	printf("la=%10ld  lb=%10ld\n", la, lb);
+	printf("la ^= lb\n");
+	la ^= lb;
+	printf("la=%10ld  lb=%10ld\n", la, lb);
+	printf("------------------------------\n\n\n");
 	return 0;
 }
 
