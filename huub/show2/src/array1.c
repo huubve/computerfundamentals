@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /* the old way of arranging SPOT about the size of your array was with a define */
-#define MAX_X 13
+#define MAX_X 4
 
 
 int main(int argc, char *argv[argc+1]) {
@@ -9,13 +9,14 @@ int main(int argc, char *argv[argc+1]) {
 	int		xs[MAX_X];
 	printf("line: %3d\n", __LINE__);
 	printf("------------------------------\n");
-	printf(" i  64*i*i*i>>i\n");
+	printf(" i  (16*i)>>i\n");
 	printf("------------------------------\n");
 	i = 0;
 	while ( i < MAX_X ) {
-		/* why? Dunno. */
 		/* the old way of arranging SPOT about the size of your array was with a define */
-		xs[i] = (64 * i * i * i ) >> i;
+		/* i=0 ... i < MAX ... i++ is typical c idiom */
+		/* we will see a variation when we start working with pointers */
+		xs[i] = (16 * i) >> i; 
 		printf("%2d  %6d\n", i, xs[i]);
 		i++;
 	}
