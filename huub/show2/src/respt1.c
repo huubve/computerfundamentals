@@ -69,7 +69,7 @@ int main(int argc, char *argv[argc+1]) {
 	t = clock();
 	runs = test_buffer_access(buf1, buf2, test_size, &sum);
 	seq_seconds = (double)(clock() - t)/(double)CLOCKS_PER_SEC;
-	printf("_______________________________________________________________________________________\n");
+	printf("%s:_________________________________________________________________________________\n", argv[0]);
 	printf("%s: %lu sequential scans of %lu bytes took %8.3lf seconds\n", argv[0], runs, bytes, seq_seconds);
 	
 	/* test random access */
@@ -83,10 +83,10 @@ int main(int argc, char *argv[argc+1]) {
 	runs = test_buffer_access(buf1, buf2, test_size, &sum);
 	rnd_seconds = (double)(clock() - t)/(double)CLOCKS_PER_SEC;
 	printf("%s: %lu random     scans of %lu bytes took %8.3lf seconds)\n", argv[0], runs, bytes, rnd_seconds);
-	printf("_______________________________________________________________________________________\n");
+	printf("%s:__________________________________________________________________________________\n", argv[0]);
 
-	printf("%s: random access took %7.1lf times sequential access.\n", argv[0], rnd_seconds/seq_seconds);
-	printf("_______________________________________________________________________________________\n");
+	printf("%s: At %lu bytes random access took %7.1lf times sequential access.\n", argv[0], bytes, rnd_seconds/seq_seconds);
+	printf("%s:__________________________________________________________________________________\n", argv[0]);
 	printf("\n");
 	
 	return 0;

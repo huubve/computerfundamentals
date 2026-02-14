@@ -1,0 +1,305 @@
+# testrun at 20260209T0835
+# time 2026/02/09 08:35:36 size 256
+respt1:_________________________________________________________________________________
+respt1: 3355443 sequential scans of 256 bytes took   21.513 seconds
+respt1: 3355443 random     scans of 256 bytes took   21.268 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 256 bytes random access took     1.0 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:36:19 size 1024
+respt1:_________________________________________________________________________________
+respt1: 838860 sequential scans of 1024 bytes took   21.125 seconds
+respt1: 838860 random     scans of 1024 bytes took   21.151 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 1024 bytes random access took     1.0 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:37:01 size 2048
+respt1:_________________________________________________________________________________
+respt1: 419430 sequential scans of 2048 bytes took   22.251 seconds
+respt1: 419430 random     scans of 2048 bytes took   24.375 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 2048 bytes random access took     1.1 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:37:48 size 4096
+respt1:_________________________________________________________________________________
+respt1: 209715 sequential scans of 4096 bytes took   23.191 seconds
+respt1: 209715 random     scans of 4096 bytes took   23.098 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 4096 bytes random access took     1.0 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:38:35 size 8192
+respt1:_________________________________________________________________________________
+respt1: 104857 sequential scans of 8192 bytes took   23.438 seconds
+respt1: 104857 random     scans of 8192 bytes took   23.330 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 8192 bytes random access took     1.0 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:39:22 size 16384
+respt1:_________________________________________________________________________________
+respt1: 52428 sequential scans of 16384 bytes took   22.977 seconds
+respt1: 52428 random     scans of 16384 bytes took   22.458 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 16384 bytes random access took     1.0 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:40:08 size 32768
+respt1:_________________________________________________________________________________
+respt1: 26214 sequential scans of 32768 bytes took   22.330 seconds
+respt1: 26214 random     scans of 32768 bytes took   22.352 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 32768 bytes random access took     1.0 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:40:52 size 49152
+respt1:_________________________________________________________________________________
+respt1: 17476 sequential scans of 49152 bytes took   22.473 seconds
+respt1: 17476 random     scans of 49152 bytes took   24.973 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 49152 bytes random access took     1.1 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:41:40 size 65536
+respt1:_________________________________________________________________________________
+respt1: 13107 sequential scans of 65536 bytes took   22.962 seconds
+respt1: 13107 random     scans of 65536 bytes took   25.566 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 65536 bytes random access took     1.1 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:42:28 size 81920
+respt1:_________________________________________________________________________________
+respt1: 10485 sequential scans of 81920 bytes took   22.247 seconds
+respt1: 10485 random     scans of 81920 bytes took   24.304 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 81920 bytes random access took     1.1 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:43:15 size 98304
+respt1:_________________________________________________________________________________
+respt1: 8738 sequential scans of 98304 bytes took   21.717 seconds
+respt1: 8738 random     scans of 98304 bytes took   25.524 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 98304 bytes random access took     1.2 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:44:02 size 114688
+respt1:_________________________________________________________________________________
+respt1: 7489 sequential scans of 114688 bytes took   22.993 seconds
+respt1: 7489 random     scans of 114688 bytes took   25.621 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 114688 bytes random access took     1.1 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:44:51 size 131072
+respt1:_________________________________________________________________________________
+respt1: 6553 sequential scans of 131072 bytes took   21.963 seconds
+respt1: 6553 random     scans of 131072 bytes took   27.844 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 131072 bytes random access took     1.3 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:45:41 size 163840
+respt1:_________________________________________________________________________________
+respt1: 5242 sequential scans of 163840 bytes took   21.955 seconds
+respt1: 5242 random     scans of 163840 bytes took   30.051 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 163840 bytes random access took     1.4 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:46:33 size 196608
+respt1:_________________________________________________________________________________
+respt1: 4369 sequential scans of 196608 bytes took   22.542 seconds
+respt1: 4369 random     scans of 196608 bytes took   34.788 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 196608 bytes random access took     1.5 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:47:31 size 229376
+respt1:_________________________________________________________________________________
+respt1: 3744 sequential scans of 229376 bytes took   21.945 seconds
+respt1: 3744 random     scans of 229376 bytes took   30.895 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 229376 bytes random access took     1.4 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:48:24 size 262144
+respt1:_________________________________________________________________________________
+respt1: 3276 sequential scans of 262144 bytes took   22.499 seconds
+respt1: 3276 random     scans of 262144 bytes took   35.467 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 262144 bytes random access took     1.6 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:49:22 size 294912
+respt1:_________________________________________________________________________________
+respt1: 2912 sequential scans of 294912 bytes took   22.403 seconds
+respt1: 2912 random     scans of 294912 bytes took   44.288 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 294912 bytes random access took     2.0 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:50:29 size 327680
+respt1:_________________________________________________________________________________
+respt1: 2621 sequential scans of 327680 bytes took   22.552 seconds
+respt1: 2621 random     scans of 327680 bytes took   47.297 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 327680 bytes random access took     2.1 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:51:38 size 360448
+respt1:_________________________________________________________________________________
+respt1: 2383 sequential scans of 360448 bytes took   22.735 seconds
+respt1: 2383 random     scans of 360448 bytes took   49.425 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 360448 bytes random access took     2.2 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:52:51 size 524288
+respt1:_________________________________________________________________________________
+respt1: 1638 sequential scans of 524288 bytes took   22.621 seconds
+respt1: 1638 random     scans of 524288 bytes took   60.122 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 524288 bytes random access took     2.7 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:54:14 size 1048576
+respt1:_________________________________________________________________________________
+respt1: 819 sequential scans of 1048576 bytes took   21.781 seconds
+respt1: 819 random     scans of 1048576 bytes took   80.194 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 1048576 bytes random access took     3.7 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:55:56 size 2097152
+respt1:_________________________________________________________________________________
+respt1: 409 sequential scans of 2097152 bytes took   21.476 seconds
+respt1: 409 random     scans of 2097152 bytes took   97.509 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 2097152 bytes random access took     4.5 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 08:57:55 size 4194304
+respt1:_________________________________________________________________________________
+respt1: 204 sequential scans of 4194304 bytes took   21.442 seconds
+respt1: 204 random     scans of 4194304 bytes took  114.068 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 4194304 bytes random access took     5.3 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:00:10 size 5242880
+respt1:_________________________________________________________________________________
+respt1: 163 sequential scans of 5242880 bytes took   21.127 seconds
+respt1: 163 random     scans of 5242880 bytes took  119.914 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 5242880 bytes random access took     5.7 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:02:31 size 6291456
+respt1:_________________________________________________________________________________
+respt1: 136 sequential scans of 6291456 bytes took   21.140 seconds
+respt1: 136 random     scans of 6291456 bytes took  124.425 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 6291456 bytes random access took     5.9 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:04:57 size 7340032
+respt1:_________________________________________________________________________________
+respt1: 117 sequential scans of 7340032 bytes took   21.208 seconds
+respt1: 117 random     scans of 7340032 bytes took  138.489 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 7340032 bytes random access took     6.5 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:07:37 size 8388608
+respt1:_________________________________________________________________________________
+respt1: 102 sequential scans of 8388608 bytes took   21.101 seconds
+respt1: 102 random     scans of 8388608 bytes took  166.090 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 8388608 bytes random access took     7.9 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:10:44 size 9437184
+respt1:_________________________________________________________________________________
+respt1: 91 sequential scans of 9437184 bytes took   21.207 seconds
+respt1: 91 random     scans of 9437184 bytes took  182.984 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 9437184 bytes random access took     8.6 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:14:08 size 10485760
+respt1:_________________________________________________________________________________
+respt1: 81 sequential scans of 10485760 bytes took   21.034 seconds
+respt1: 81 random     scans of 10485760 bytes took  196.053 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 10485760 bytes random access took     9.3 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:17:46 size 11534336
+respt1:_________________________________________________________________________________
+respt1: 74 sequential scans of 11534336 bytes took   21.010 seconds
+respt1: 74 random     scans of 11534336 bytes took  213.063 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 11534336 bytes random access took    10.1 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:21:40 size 12582912
+respt1:_________________________________________________________________________________
+respt1: 68 sequential scans of 12582912 bytes took   21.090 seconds
+respt1: 68 random     scans of 12582912 bytes took  242.931 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 12582912 bytes random access took    11.5 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:26:04 size 16777216
+respt1:_________________________________________________________________________________
+respt1: 51 sequential scans of 16777216 bytes took   21.117 seconds
+respt1: 51 random     scans of 16777216 bytes took  320.549 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 16777216 bytes random access took    15.2 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:31:47 size 33554432
+respt1:_________________________________________________________________________________
+respt1: 25 sequential scans of 33554432 bytes took   20.828 seconds
+respt1: 25 random     scans of 33554432 bytes took  538.269 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 33554432 bytes random access took    25.8 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:41:07 size 67108864
+respt1:_________________________________________________________________________________
+respt1: 12 sequential scans of 67108864 bytes took   20.806 seconds
+respt1: 12 random     scans of 67108864 bytes took  824.804 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 67108864 bytes random access took    39.6 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 09:55:14 size 134217728
+respt1:_________________________________________________________________________________
+respt1: 6 sequential scans of 134217728 bytes took   19.783 seconds
+respt1: 6 random     scans of 134217728 bytes took 1114.738 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 134217728 bytes random access took    56.3 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 10:14:09 size 201326592
+respt1:_________________________________________________________________________________
+respt1: 4 sequential scans of 201326592 bytes took   19.867 seconds
+respt1: 4 random     scans of 201326592 bytes took 1202.587 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 201326592 bytes random access took    60.5 times sequential access.
+respt1:__________________________________________________________________________________
+
+# time 2026/02/09 10:34:32 size 268435456
+respt1:_________________________________________________________________________________
+respt1: 3 sequential scans of 268435456 bytes took   21.409 seconds
+respt1: 3 random     scans of 268435456 bytes took 1165.811 seconds)
+respt1:__________________________________________________________________________________
+respt1: At 268435456 bytes random access took    54.5 times sequential access.
+respt1:__________________________________________________________________________________
+
